@@ -3,294 +3,804 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>东京 5 日行程 · 带老人版 · 2026.11.11-11.15</title>
+<title>东京 · 富士山 5 天 4 晚 · 旅行手册</title>
 <style>
-  :root{
-    --bg:#FBF9F6; --card:#FFFFFF; --ink:#23201D; --ink2:#5C554E;
-    --line:#E6DFD6; --brown:#8B5E3C; --deep:#2F4F4F; --red:#B23A2E;
-    --soft:#F4EFE8; --green:#4F6B4A;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
-    line-height:1.75;font-size:15px;}
-  .wrap{max-width:920px;margin:0 auto;padding:40px 22px 80px;}
-  header{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:30px;}
-  .kicker{font-size:12px;letter-spacing:.22em;color:var(--brown);font-weight:600;margin-bottom:10px;}
-  h1{font-size:31px;line-height:1.3;margin:0 0 12px;font-weight:700;letter-spacing:-.5px;}
-  .meta{color:var(--ink2);font-size:13.5px;}
-  .meta span{margin-right:16px;white-space:nowrap;}
-  h2{font-size:19px;margin:44px 0 14px;padding-left:11px;border-left:4px solid var(--brown);font-weight:700;}
-  h3{font-size:15.5px;margin:24px 0 8px;font-weight:700;color:var(--deep);}
-  .lead{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:22px 0;}
-  .lead b{color:var(--red);}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media(max-width:680px){.grid{grid-template-columns:1fr;}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
-  .card .tag{display:inline-block;font-size:11.5px;background:var(--soft);color:var(--brown);
-    padding:2px 8px;border-radius:4px;margin-bottom:8px;font-weight:600;}
-  .card h4{margin:0 0 6px;font-size:15px;}
-  .card p{margin:4px 0;font-size:13.5px;color:var(--ink2);}
-  table{width:100%;border-collapse:collapse;background:var(--card);font-size:13.5px;margin:10px 0;}
-  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
-  th{background:var(--soft);font-weight:700;font-size:13px;color:var(--deep);}
-  .day{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:16px;overflow:hidden;}
-  .day-h{background:var(--soft);padding:12px 18px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
-  .day-h .d{font-weight:700;font-size:16px;color:var(--red);}
-  .day-h .t{font-weight:700;font-size:15px;}
-  .day-h .s{margin-left:auto;font-size:12.5px;color:var(--ink2);}
-  .day-b{padding:12px 18px 16px;}
-  .row{display:flex;gap:14px;padding:7px 0;border-bottom:1px dashed var(--line);}
-  .row:last-child{border-bottom:none;}
-  .row .tm{flex:0 0 76px;font-variant-numeric:tabular-nums;color:var(--brown);font-weight:600;font-size:13.5px;}
-  .row .ct{flex:1;font-size:14px;}
-  .row .ct em{font-style:normal;color:var(--ink2);font-size:13px;}
-  .note{background:#FDF6EE;border-left:3px solid #D9A45B;padding:10px 14px;font-size:13px;color:#6B4E2E;margin:12px 0;border-radius:0 6px 6px 0;}
-  .warn{background:#FBF0EE;border-left:3px solid var(--red);padding:10px 14px;font-size:13px;color:#7A2B22;margin:12px 0;border-radius:0 6px 6px 0;}
-  ul,ol{margin:6px 0 6px 18px;padding:0;}
-  li{margin:5px 0;font-size:14px;}
-  .small{font-size:12.5px;color:var(--ink2);}
-  .check li{list-style:none;position:relative;padding-left:20px;}
-  .check li:before{content:"□";position:absolute;left:0;color:var(--brown);}
-  .src{font-size:12.5px;color:var(--ink2);}
-  .src a{color:var(--deep);text-decoration:none;border-bottom:1px dotted #B9AFA2;}
-  .pill{display:inline-block;font-size:11.5px;padding:1px 7px;border-radius:10px;background:#EAF0E8;color:var(--green);font-weight:600;margin-left:6px;}
-  footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:#8A8279;}
+:root{
+  --ink:#0d3b40;
+  --time:#5f7d85;
+  --teal:#12657c;
+  --price:#8a6a3b;
+  --warn:#b23b3b;
+  --meta:#7a8a8d;
+  --mark:#f3ead6;
+  --paper:#f6f4ee;
+  --panel:#fffdf8;
+  --line:rgba(13,59,64,.10);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:#22343a;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans",sans-serif;
+  line-height:1.78;font-size:15px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 80px;}
+
+/* ---------- cover ---------- */
+.cover{position:relative;min-height:430px;display:flex;align-items:flex-end;
+  background:#0d3b40;color:#f6f4ee;overflow:hidden;}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.52;}
+.cover:after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(13,59,64,.15) 0%,rgba(13,59,64,.55) 55%,rgba(13,59,64,.92) 100%);}
+.cover-in{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:0 20px 42px;width:100%;}
+.kicker{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;opacity:.82;margin-bottom:14px;}
+.cover h1{font-size:38px;line-height:1.24;margin:0 0 10px;font-weight:700;letter-spacing:-.6px;}
+.cover .sub{font-size:14.5px;opacity:.9;margin-bottom:20px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{font-size:12px;padding:4px 11px;border:1px solid rgba(246,244,238,.38);
+  border-radius:999px;color:#f6f4ee;background:rgba(246,244,238,.06);}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:30;background:rgba(246,244,238,.96);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(8px);}
+nav .inner{max-width:760px;margin:0 auto;padding:0 20px;display:flex;gap:2px;overflow-x:auto;}
+nav a{flex:0 0 auto;font-size:12.5px;color:var(--time);text-decoration:none;
+  padding:13px 11px;border-bottom:2px solid transparent;white-space:nowrap;}
+nav a.on{color:var(--ink);border-bottom-color:var(--ink);font-weight:600;}
+
+/* ---------- section ---------- */
+section{padding-top:46px;}
+.sec-head{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:8px;}
+.sec-num{font-size:12px;color:var(--meta);letter-spacing:.1em;}
+h2{font-size:24px;margin:0;font-weight:700;color:var(--ink);letter-spacing:-.3px;}
+.sec-en{font-size:11.5px;color:var(--meta);letter-spacing:.12em;text-transform:uppercase;margin-left:auto;}
+.intro{font-size:14px;color:#4b6167;margin:12px 0 20px;}
+
+/* ---------- day ---------- */
+.day{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  margin-bottom:16px;overflow:hidden;}
+.day-h{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.day-h .d{font-size:12.5px;color:var(--warn);font-weight:700;letter-spacing:.04em;}
+.day-h .t{font-size:16px;font-weight:700;color:var(--ink);}
+.day-h .m{margin-left:auto;font-size:11.5px;color:var(--meta);}
+.day-b{padding:6px 18px 14px;}
+.row{display:flex;gap:14px;padding:8px 0;border-bottom:1px dashed var(--line);}
+.row:last-child{border-bottom:none;}
+.row .tm{flex:0 0 58px;font-size:13px;color:var(--time);font-variant-numeric:tabular-nums;padding-top:1px;}
+.row .ct{flex:1;font-size:14px;}
+.row .ct b{color:var(--ink);font-weight:600;}
+.row .ct span.n{display:block;font-size:12.5px;color:#6a7f84;margin-top:1px;}
+
+/* ---------- card ---------- */
+.cards{display:grid;grid-template-columns:1fr;gap:14px;}
+@media(min-width:700px){.cards.two{grid-template-columns:1fr 1fr;}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:16px 16px 15px;overflow:hidden;}
+.card .imgwrap{margin:-16px -16px 13px;}
+.card-img{width:100%;height:168px;object-fit:cover;display:block;background:#dfe6e4;}
+.card h3{font-size:16px;margin:0 0 3px;color:var(--ink);font-weight:700;line-height:1.45;}
+.card .native{font-size:11.5px;color:var(--meta);margin-bottom:7px;letter-spacing:.02em;}
+.card .lede{font-size:13.5px;color:#41585e;margin:0 0 9px;}
+.meta-row{font-size:12.5px;color:#5f7d85;margin:3px 0;}
+.meta-row .k{color:var(--meta);}
+.price{color:var(--price);font-weight:600;}
+.warnline{color:var(--warn);font-size:12.5px;font-weight:600;}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;
+  background:rgba(18,101,124,.09);color:var(--teal);margin-right:6px;font-weight:600;}
+.tag.g{background:rgba(138,106,59,.10);color:var(--price);}
+.tag.r{background:rgba(178,59,59,.09);color:var(--warn);}
+.acts{display:flex;gap:10px;align-items:center;margin-top:11px;flex-wrap:wrap;}
+.map-a{font-size:12.5px;color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(18,101,124,.35);}
+.nav-btn{font:inherit;font-size:12.5px;color:var(--teal);background:rgba(18,101,124,.07);
+  border:1px solid rgba(18,101,124,.25);border-radius:6px;padding:6px 13px;cursor:pointer;min-height:32px;}
+.nav-btn:hover{background:rgba(18,101,124,.13);}
+
+/* ---------- misc ---------- */
+.mark{background:var(--mark);padding:1px 3px;border-radius:2px;}
+ul,ol{margin:8px 0 8px 18px;padding:0;}
+li{margin:5px 0;font-size:14px;}
+.tipbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;}
+.tipbox h4{margin:0 0 6px;font-size:14px;color:var(--ink);}
+.tipbox p{margin:4px 0;font-size:13.5px;color:#4b6167;}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--panel);margin:12px 0;}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+th{background:rgba(13,59,64,.05);font-weight:700;color:var(--ink);font-size:12.5px;}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap;}
+.small{font-size:12px;color:var(--meta);}
+
+/* unscheduled */
+.unc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;}
+.unc.picked{border-color:var(--teal);box-shadow:0 0 0 2px rgba(18,101,124,.10);}
+.unc label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;}
+.unc input[type=checkbox]{margin-top:6px;width:17px;height:17px;accent-color:#12657c;flex:0 0 auto;}
+.unc .body{flex:1;}
+.unc h3{margin:0 0 4px;font-size:15.5px;color:var(--ink);}
+.gen{margin:18px 0 8px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.gen button{font:inherit;font-size:13.5px;background:var(--ink);color:#f6f4ee;border:none;
+  border-radius:7px;padding:11px 18px;cursor:pointer;min-height:44px;}
+.gen button.ghost{background:transparent;color:var(--teal);border:1px solid rgba(18,101,124,.3);}
+textarea{width:100%;min-height:190px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:12.5px;line-height:1.7;padding:12px;border:1px solid var(--line);
+  border-radius:8px;background:#fbfaf6;color:#33474d;resize:vertical;}
+
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:11.5px;color:var(--meta);line-height:1.9;}
+@media(max-width:480px){
+  .cover{min-height:360px;}
+  .cover h1{font-size:29px;}
+  .cover .sub{font-size:13px;}
+  h2{font-size:21px;}
+  .row .tm{flex:0 0 52px;}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<header>
-  <div class="kicker">TOKYO × FUJI · FAMILY SLOW TRAVEL</div>
-  <h1>东京 5 日 · 带老人慢行程</h1>
-  <div class="meta">
-    <span>2026.11.11（三）— 11.15（日）</span>
-    <span>5 天 4 晚</span>
-    <span>落地 14:00 / 返程 15 日午后</span>
+<header class="cover">
+  <img src="tokyo-guide_files/fuji.jpg" alt="河口湖与富士山">
+  <div class="cover-in">
+    <div class="kicker">Tokyo &amp; Fuji · Slow Travel</div>
+    <h1>东京 · 富士山<br>5 天 4 晚</h1>
+    <div class="sub">2026.11.11 — 11.15 ｜ 带长辈慢行 ｜ 红叶季</div>
+    <div class="chips">
+      <span class="chip">每天一个主景点</span>
+      <span class="chip">河口湖住 1 晚温泉</span>
+      <span class="chip">富士山不当天往返</span>
+      <span class="chip">购物分两段</span>
+    </div>
   </div>
 </header>
 
-<div class="lead">
-  <p style="margin:0 0 8px;"><b>一句话结论：</b>东京住「东京站八重洲侧／日本桥」3 晚，中间抽 1 晚去河口湖住温泉旅馆；富士山不当天往返，御殿场奥莱放在回程路上顺路解决。</p>
-  <p style="margin:0;" class="small">这样安排能同时满足三件事：老人不用早起赶车、富士山看红叶不用来回坐 4 小时车、购物分成「奥莱 + 银座」两段不挤在一天。</p>
-</div>
+<nav><div class="inner">
+  <a href="#itinerary" class="on">行程</a>
+  <a href="#attractions">景点</a>
+  <a href="#experiences">体验</a>
+  <a href="#dining">餐饮住宿</a>
+  <a href="#shopping">购物</a>
+  <a href="#tips">当地贴士</a>
+  <a href="#unscheduled">未安排</a>
+</div></nav>
 
-<h2>一、住宿位置（这是整趟行程的骨架）</h2>
+<div class="wrap">
 
-<p>带老人选住宿，判断标准只有一个：<b>能不能少走路、少换乘、少搬行李</b>。所以不推荐新宿——车站太大、出口太多、地面有坡，老人容易走散走累。推荐东京站八重洲侧或日本桥，理由三条：</p>
-<ul>
-  <li>机场巴士／NEX 直达，下车就是酒店，行李不用拖过街；</li>
-  <li>去河口湖的高速巴士从东京站八重洲南口发车，早上不用先挤地铁去新宿；</li>
-  <li>银座、日本桥步行或一站地铁可达，百货密集、路面平、随处能坐下。</li>
-</ul>
+<!-- ================= 1 行程 ================= -->
+<section id="itinerary">
+  <div class="sec-head"><span class="sec-num">01</span><h2>行程</h2><span class="sec-en">Itinerary</span></div>
+  <p class="intro">四晚拆成两段：东京住三晚、河口湖住一晚。这样富士山不用当天来回坐四小时车，长辈也不用连着换酒店。东京的基地放在东京站八重洲一侧——机场巴士、去河口湖的巴士都在同一片，银座步行可达。</p>
 
-<table>
-  <tr><th style="width:16%">位置</th><th style="width:26%">候选酒店</th><th>为什么合适</th><th style="width:16%">参考价位</th></tr>
-  <tr>
-    <td><b>东京站<br>八重洲</b><br><span class="small">首选</span></td>
-    <td>Hotel Metropolitan Marunouchi<br><span class="small">东京站八重洲北口直结</span></td>
-    <td>出站即到，全程室内；房间偏小但位置无可替代；楼下就是大丸百货餐饮层</td>
-    <td>¥2,600–3,600/晚</td>
-  </tr>
-  <tr>
-    <td><b>日本桥</b><br><span class="small">次选，更安静</span></td>
-    <td>三井花园酒店日本桥普雷米尔<br><span class="small">三越前站步行 2 分</span></td>
-    <td>街区安静、路面平，走到三越本店 5 分钟；早餐好，房间比东京站同价位大</td>
-    <td>¥1,800–2,600/晚</td>
-  </tr>
-  <tr>
-    <td><b>银座</b><br><span class="small">购物优先</span></td>
-    <td>千禧三井花园酒店银座<br><span class="small">银座四丁目十字路口</span></td>
-    <td>下楼就是三越、松屋；购物累了随时回房休息，这点对老人价值很高</td>
-    <td>¥2,200–3,200/晚</td>
-  </tr>
-  <tr>
-    <td><b>河口湖</b><br><span class="small">住 1 晚</span></td>
-    <td>湖南庄 / 风之 KUKUNA<br><span class="small">湖山亭うぶや为高端备选</span></td>
-    <td>都有河口湖站免费接送、房内或包间晚餐、屋顶足汤；不用出门就能看富士山</td>
-    <td>¥2,600–4,200/人<br><span class="small">含早晚两餐</span></td>
-  </tr>
-</table>
-
-<div class="warn">
-<b>订房结构要注意：</b>东京实际是 <b>11/11、11/12、11/14 三晚</b>（11/13 住河口湖）。建议拆成「11–13 两晚 + 14 一晚」两张订单，同一家酒店连订四晚但空置 13 号会白付一晚房费。入住时把大行李箱寄存在东京酒店，只带一个过夜小包去河口湖。
-</div>
-
-<div class="note">
-<b>时间紧迫度：</b>11 月中旬正撞河口湖红叶祭（2026.11.7–11.29），周五的湖边温泉房是全年最紧的几档之一，<b>先订河口湖，再订东京</b>。
-</div>
-
-<h2>二、逐日行程</h2>
-
-<div class="day">
-  <div class="day-h"><span class="d">11.11 周三</span><span class="t">落地日 · 只做三件事</span><span class="s">步数 2000 以内</span></div>
-  <div class="day-b">
-    <div class="row"><div class="tm">14:00</div><div class="ct">落地。出关 + 取行李预留 60 分钟 <em>（国际航班到达高峰，别压缩）</em></div></div>
-    <div class="row"><div class="tm">15:00</div><div class="ct">进城：<b>羽田</b>→东京站约 30 分钟（京急＋JR）；<b>成田</b>→东京站 NEX 约 60 分钟，或利木津巴士直达酒店约 90 分钟 <em>（带老人＋大件行李，巴士更省力，贵约 1000 日元）</em></div></div>
-    <div class="row"><div class="tm">16:15</div><div class="ct">入住、烧水、让老人躺 40 分钟</div></div>
-    <div class="row"><div class="tm">17:30</div><div class="ct">酒店步行 5–10 分钟内晚餐 <em>选百货餐饮层或酒店餐厅：电梯直达、有座位、不用站着等位</em></div></div>
-    <div class="row"><div class="tm">19:00</div><div class="ct">楼下便利店／药妆补给，回房休息</div></div>
-    <div class="note">第一天不安排任何景点。落地日赶景点是带老人行程里最常见的错误。</div>
+  <div class="day">
+    <div class="day-h"><span class="d">11.11 周三</span><span class="t">第 1 天 · 落地日</span><span class="m">只做三件事</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">14:00</div><div class="ct"><b>落地</b><span class="n">出关加取行李预留 60 分钟，国际到达高峰不要压缩</span></div></div>
+      <div class="row"><div class="tm">15:00</div><div class="ct"><b>进城，往东京站方向</b><span class="n">羽田约 30 分钟；成田坐 NEX 约 60 分钟，或机场巴士直达酒店约 90 分钟。带行李和长辈，巴士少搬一次箱子更划算</span></div></div>
+      <div class="row"><div class="tm">16:15</div><div class="ct"><b>入住，休息 40 分钟</b><span class="n">住宿：东京站八重洲 / 日本桥一带，具体酒店见第 4 模块</span></div></div>
+      <div class="row"><div class="tm">17:30</div><div class="ct"><b>晚餐：酒店步行 10 分钟内</b><span class="n">百货餐饮层或酒店餐厅，电梯直达、有座位、不用站着等位</span></div></div>
+      <div class="row"><div class="tm">19:00</div><div class="ct"><b>楼下便利店补给，回房</b><span class="n">第一天不排景点。落地日赶行程是带长辈最常见的错误</span></div></div>
+    </div>
   </div>
-</div>
 
-<div class="day">
-  <div class="day-h"><span class="d">11.12 周四</span><span class="t">浅草 + 晴空塔（半天景点，下午回房歇）</span><span class="s">步数 6000–7000</span></div>
-  <div class="day-b">
-    <div class="row"><div class="tm">8:30</div><div class="ct">早餐（酒店或便利店）</div></div>
-    <div class="row"><div class="tm">9:40</div><div class="ct">地铁银座线 → 浅草，约 15 分钟</div></div>
-    <div class="row"><div class="tm">10:10</div><div class="ct">浅草寺、仲见世通 <em>只走主街，不钻小巷；雷门到本堂全程平路，中途有长椅</em></div></div>
-    <div class="row"><div class="tm">11:35</div><div class="ct">午餐：浅草老铺天妇罗／鳗鱼 <em>11:30 前入座，12 点后必排队</em></div></div>
-    <div class="row"><div class="tm">13:00</div><div class="ct">地铁浅草线 1 站到押上（3 分钟），直连晴空塔</div></div>
-    <div class="row"><div class="tm">13:20</div><div class="ct">晴空塔天望甲板 <em>提前网上订票免排队；全程电梯，室内暖气足</em></div></div>
-    <div class="row"><div class="tm">15:00</div><div class="ct">Solamachi 商场坐下喝咖啡，或直接回酒店午休</div></div>
-    <div class="row"><div class="tm">17:00</div><div class="ct">体力尚可：银座散步（无印良品旗舰店、伊东屋）；否则留酒店休息</div></div>
-    <div class="row"><div class="tm">18:30</div><div class="ct">晚餐</div></div>
+  <div class="day">
+    <div class="day-h"><span class="d">11.12 周四</span><span class="t">第 2 天 · 浅草一带</span><span class="m">步数 6000–7000</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">08:30</div><div class="ct"><b>早餐</b><span class="n">酒店或便利店，不赶早</span></div></div>
+      <div class="row"><div class="tm">09:40</div><div class="ct"><b>地铁往浅草</b><span class="n">银座线约 15 分钟，出站即到雷门</span></div></div>
+      <div class="row"><div class="tm">10:10</div><div class="ct"><b>浅草寺、仲见世通</b><span class="n">只走主街，不钻小巷；雷门到本堂全程平路，中途有长椅</span></div></div>
+      <div class="row"><div class="tm">11:35</div><div class="ct"><b>午餐：浅草站周边</b><span class="n">11:30 前入座，12 点后必排队。店名见第 4 模块</span></div></div>
+      <div class="row"><div class="tm">13:00</div><div class="ct"><b>地铁一站到押上，直连晴空塔</b><span class="n">浅草线 1 站 3 分钟</span></div></div>
+      <div class="row"><div class="tm">13:20</div><div class="ct"><b>晴空塔天望甲板</b><span class="n">提前订票免排队；全程电梯，室内暖气足</span></div></div>
+      <div class="row"><div class="tm">15:00</div><div class="ct"><b>商场坐下喝咖啡，或回酒店午休</b><span class="n">这一天到此为止也完全够</span></div></div>
+      <div class="row"><div class="tm">17:00</div><div class="ct"><b>体力尚可：银座散步</b><span class="n">不买东西也可以，街区平、随时能坐</span></div></div>
+      <div class="row"><div class="tm">18:30</div><div class="ct"><b>晚餐，21:00 前回酒店</b></div></div>
+    </div>
   </div>
-</div>
 
-<div class="day">
-  <div class="day-h"><span class="d">11.13 周五</span><span class="t">河口湖 · 红叶祭 + 温泉</span><span class="s">车程 2 小时，全天只此一项</span></div>
-  <div class="day-b">
-    <div class="row"><div class="tm">7:30</div><div class="ct">早餐、退房，大行李寄存东京酒店前台，只带过夜包</div></div>
-    <div class="row"><div class="tm">8:40</div><div class="ct"><b>方案 A（推荐）：</b>东京站八重洲南口 高速巴士 → 河口湖，约 2 小时 15 分，票价约 ¥2,000 <em>不用换乘，一觉到</em><br><b>方案 B：</b>包车酒店门到门，约 2.5 小时，一天 ¥40,000–55,000，可中途停御殿场<br><b>方案 C：</b>新宿 9:30 富士回游号 → 11:28 河口湖，¥4,200 全车指定席 <em>但东京站到新宿要挤一次早高峰，带老人不划算</em></div></div>
-    <div class="row"><div class="tm">11:15</div><div class="ct">到河口湖站，站前「ほうとう不动」吃山梨乡土面 <em>热汤面、有座位、上菜快</em></div></div>
-    <div class="row"><div class="tm">13:00</div><div class="ct">酒店接驳车接走（订房时预约），办入住或先寄存</div></div>
-    <div class="row"><div class="tm">14:00</div><div class="ct">房内休息 1.5 小时，泡第一轮汤</div></div>
-    <div class="row"><div class="tm">15:45</div><div class="ct">周游巴士红线 → 「久保田一竹美术馆」站，步行 5 分钟到红叶回廊 <em>一日券 ¥1,500，红绿线随便坐，下车出示即可</em></div></div>
-    <div class="row"><div class="tm">16:15</div><div class="ct">红叶回廊 + 湖畔拍富士山 <em>150 米枫树隧道，尽头正对富士山；17:00 前后光线最好</em></div></div>
-    <div class="row"><div class="tm">17:30</div><div class="ct">回酒店（红线末班前务必确认）</div></div>
-    <div class="row"><div class="tm">18:00</div><div class="ct">房内怀石晚餐，20:00 泡汤</div></div>
-    <div class="note"><b>可以不去的：</b>天上山缆车（排队常超 30 分钟，山上还要爬）、河口湖美术馆（¥800 只有两个展厅）、网红罗森（全是人，湖边任意位置都比它好拍）。这三个在攻略里出现频率高，但对老人是纯消耗。</div>
+  <div class="day">
+    <div class="day-h"><span class="d">11.13 周五</span><span class="t">第 3 天 · 河口湖</span><span class="m">全天只此一项</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">07:30</div><div class="ct"><b>早餐，退房</b><span class="n">大行李寄存东京酒店前台，只带一个过夜包</span></div></div>
+      <div class="row"><div class="tm">08:40</div><div class="ct"><b>出发去河口湖</b><span class="n">首选东京站八重洲南口的高速巴士，约 2 小时 15 分，不用换乘。备选新宿 09:30 的直达特急，11:28 到，但从东京站过去要挤一次早高峰</span></div></div>
+      <div class="row"><div class="tm">11:15</div><div class="ct"><b>河口湖站，站前吃午饭</b><span class="n">乡土热汤面，有座位、上菜快</span></div></div>
+      <div class="row"><div class="tm">13:00</div><div class="ct"><b>酒店接驳车接到旅馆</b><span class="n">订房时预约接送；先寄存或直接入住</span></div></div>
+      <div class="row"><div class="tm">14:00</div><div class="ct"><b>房内休息 1.5 小时，泡第一轮汤</b><span class="n">住宿：河口湖北岸 / 船津一带，具体旅馆见第 4 模块</span></div></div>
+      <div class="row"><div class="tm">15:45</div><div class="ct"><b>周游巴士红线往红叶回廊</b><span class="n">一日券 1,500 日元，红绿线随便坐；到「久保田一竹美术馆」下车步行 5 分钟</span></div></div>
+      <div class="row"><div class="tm">16:15</div><div class="ct"><b>红叶回廊、湖畔拍富士山</b><span class="n">150 米枫树隧道，尽头正对富士山；17:00 前后光线最好</span></div></div>
+      <div class="row"><div class="tm">17:30</div><div class="ct"><b>回旅馆</b><span class="n">先确认红线末班时间，别卡最后一班</span></div></div>
+      <div class="row"><div class="tm">18:00</div><div class="ct"><b>房内会席晚餐，20:00 泡汤</b><span class="n">多数温泉旅馆 18:00–18:30 开餐，入住时问清</span></div></div>
+    </div>
   </div>
-</div>
 
-<div class="day">
-  <div class="day-h"><span class="d">11.14 周六</span><span class="t">河口湖 → 御殿场奥莱 → 回东京</span><span class="s">购物主战场，控制在 4 小时</span></div>
-  <div class="day-b">
-    <div class="row"><div class="tm">7:30</div><div class="ct">早餐，再泡一次早汤（早上人最少）</div></div>
-    <div class="row"><div class="tm">9:00</div><div class="ct">退房，酒店车送到河口湖站，行李寄车站柜</div></div>
-    <div class="row"><div class="tm">9:40</div><div class="ct">特急巴士「御殿场·河口湖线」→ 御殿场 Premium Outlets，约 60 分钟，¥1,850（网络预订）<em>需提前订座，班次少（假日仅 4 班），订不到就改路线巴士但车程 105 分钟，不建议</em></div></div>
-    <div class="row"><div class="tm">11:00</div><div class="ct">到奥莱：先服务台租轮椅（免费／押金），取地图圈定 6–8 个目标品牌</div></div>
-    <div class="row"><div class="tm">11:15</div><div class="ct">West Zone 先逛 <em>老人可在中庭长椅休息，奥莱全程有顶棚和暖气</em></div></div>
-    <div class="row"><div class="tm">13:00</div><div class="ct">美食广场午餐（不用等位，座位多）</div></div>
-    <div class="row"><div class="tm">14:00</div><div class="ct">继续逛 1.5 小时，15:30 前必须收尾</div></div>
-    <div class="row"><div class="tm">15:30</div><div class="ct">5 号站牌 高速巴士 → 东京站／新宿，约 95 分钟，¥1,650–2,000 <em>回程票必须线上提前买，现场经常没位</em></div></div>
-    <div class="row"><div class="tm">17:15</div><div class="ct">到东京，回酒店办入住，18:30 晚餐</div></div>
-    <div class="warn"><b>这天的风险点：</b>周六奥莱人多。对策是 11:00 开门即到、先打热门品牌，且把总时长压到 4 小时以内。老人在奥莱超过 4 小时一定崩。</div>
+  <div class="day">
+    <div class="day-h"><span class="d">11.14 周六</span><span class="t">第 4 天 · 奥莱 → 回东京</span><span class="m">购物控制在 4 小时</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">07:30</div><div class="ct"><b>早餐，再泡一次早汤</b><span class="n">早上人最少，这是住温泉旅馆最值的一段时间</span></div></div>
+      <div class="row"><div class="tm">09:00</div><div class="ct"><b>退房，旅馆送到河口湖站</b><span class="n">注意多数温泉旅馆 10:00 退房，别按国内习惯拖到 12 点</span></div></div>
+      <div class="row"><div class="tm">09:40</div><div class="ct"><b>特急巴士往御殿场</b><span class="n">约 60 分钟，需提前订座；班次少，订不到就改路线巴士，但要 105 分钟，带长辈不建议</span></div></div>
+      <div class="row"><div class="tm">11:00</div><div class="ct"><b>到奥莱，先租轮椅、圈品牌</b><span class="n">服务台可借轮椅；先圈 6–8 个目标，不逐店逛</span></div></div>
+      <div class="row"><div class="tm">11:15</div><div class="ct"><b>西区先逛</b><span class="n">全程有顶棚，老人可在中庭长椅休息</span></div></div>
+      <div class="row"><div class="tm">13:00</div><div class="ct"><b>美食广场午饭</b><span class="n">不用等位，座位多</span></div></div>
+      <div class="row"><div class="tm">14:00</div><div class="ct"><b>再逛 1.5 小时，15:30 收尾</b><span class="n">超过 4 小时长辈一定撑不住</span></div></div>
+      <div class="row"><div class="tm">15:30</div><div class="ct"><b>高速巴士回东京</b><span class="n">约 95 分钟。回程票必须线上提前买，现场经常没位</span></div></div>
+      <div class="row"><div class="tm">17:15</div><div class="ct"><b>到东京，入住，18:30 晚饭</b></div></div>
+    </div>
   </div>
-</div>
 
-<div class="day">
-  <div class="day-h"><span class="d">11.15 周日</span><span class="t">上午补货 → 午后机场</span><span class="s">不排景点</span></div>
-  <div class="day-b">
-    <div class="row"><div class="tm">8:30</div><div class="ct">早餐，收拾行李</div></div>
-    <div class="row"><div class="tm">9:30</div><div class="ct">退房，行李寄前台</div></div>
-    <div class="row"><div class="tm">10:00</div><div class="ct">日本桥三越本店／银座补货 <em>退税柜台上午人少；老人可在百货休息区坐等</em></div></div>
-    <div class="row"><div class="tm">12:00</div><div class="ct">午餐（百货餐饮层）</div></div>
-    <div class="row"><div class="tm">13:00</div><div class="ct">取行李出发：羽田约 35 分钟，成田 NEX／巴士 60–90 分钟 <em>按起飞前 3 小时到机场倒推</em></div></div>
+  <div class="day">
+    <div class="day-h"><span class="d">11.15 周日</span><span class="t">第 5 天 · 补货 → 机场</span><span class="m">不排景点</span></div>
+    <div class="day-b">
+      <div class="row"><div class="tm">08:30</div><div class="ct"><b>早餐，收行李</b><span class="n">前一晚把要托运的东西分好，早上不慌</span></div></div>
+      <div class="row"><div class="tm">09:30</div><div class="ct"><b>退房，行李寄前台</b></div></div>
+      <div class="row"><div class="tm">10:00</div><div class="ct"><b>日本桥 / 银座补货</b><span class="n">退税柜台上午人少；老人可在百货休息区坐等</span></div></div>
+      <div class="row"><div class="tm">12:00</div><div class="ct"><b>午餐：百货餐饮层</b></div></div>
+      <div class="row"><div class="tm">13:00</div><div class="ct"><b>取行李去机场</b><span class="n">羽田约 35 分钟，成田 60–90 分钟；按起飞前 3 小时到机场倒推</span></div></div>
+    </div>
   </div>
-</div>
 
-<h2>三、必须现在就订的四件事</h2>
-
-<ul class="check">
-  <li><b>河口湖温泉酒店（11/13 一晚）</b>— 红叶祭 + 周五，最先卖完。订带「河口湖站接送」和「房内晚餐」的房型，问清是否有电梯。</li>
-  <li><b>东京酒店（11/11–11/13 两晚 + 11/14 一晚）</b>— 同一家酒店分两张订单，入住时说明中间离店一晚、要寄存行李。</li>
-  <li><b>11/13 东京→河口湖 高速巴士</b>— 提前 1 个月开售，红叶季周末前一天的上午班次很抢手。</li>
-  <li><b>11/14 河口湖→御殿场 + 御殿场→东京 两段巴士</b>— 都要线上订；御殿场回东京的票现场基本买不到。</li>
-</ul>
-<p class="small">可选项：晴空塔门票（提前 1–2 周）、全程包车（若老人行动不便，包车能把每天步行量砍掉三分之一，值这个钱）。</p>
-
-<h2>四、老人友好六条硬规则</h2>
-<div class="grid">
-  <div class="card"><div class="tag">节奏</div><h4>一天一个主景点</h4><p>上午出门、午后回酒店躺 1.5 小时、傍晚再轻活动。两段式比连轴转多玩一半。</p></div>
-  <div class="card"><div class="tag">吃饭</div><h4>11:30 和 17:30 入座</h4><p>卡在日本人饭点前半小时，不用站着等位。优先选百货餐饮层或酒店餐厅，电梯直达。</p></div>
-  <div class="card"><div class="tag">穿衣</div><h4>河口湖按 1℃ 准备</h4><p>11 月河口湖日均 7℃、夜间可到 1℃，东京 13℃。抓绒＋防风外套，暖宝宝备几片。</p></div>
-  <div class="card"><div class="tag">如厕</div><h4>每 2 小时一次主动停</h4><p>日本公共厕所多但位置不直观，别等老人开口。百货、便利店、车站都可用。</p></div>
-  <div class="card"><div class="tag">行李</div><h4>只带一个过夜包去河口湖</h4><p>大箱子锁在东京酒店。巴士行李舱空间有限，红叶季尤其挤。</p></div>
-  <div class="card"><div class="tag">兜底</div><h4>留半天弹性</h4><p>富士山能否露面全看天气。11/13 若全阴，把红叶回廊换到 11/14 清晨再看一次，行程其余不动。</p></div>
-</div>
-
-<h2>五、购物与吃</h2>
-
-<h3>购物分三段，别挤一天</h3>
-<table>
-  <tr><th style="width:18%">场景</th><th style="width:26%">去哪</th><th>适合买什么</th></tr>
-  <tr><td>奥莱（11/14）</td><td>御殿场 Premium Outlets</td><td>运动户外、欧美服饰、日本本土品牌；折扣力度全年较好的一档</td></tr>
-  <tr><td>百货（11/12、11/15）</td><td>日本桥三越本店、银座三越／松屋、Ginza Six</td><td>化妆品、食品伴手礼、正式一点的衣物；退税柜台在店内办</td></tr>
-  <tr><td>街边（随时）</td><td>银座松本清、唐吉诃德、Bic Camera</td><td>药妆、电器、保温杯、小家电；唐吉诃德银座店营业到很晚</td></tr>
-</table>
-<p class="small"><b>退税：</b>同一店当日含税满 ¥5,000 可退，必须带护照原件；消耗品（药妆、食品）会封袋，离境前不能拆。百货通常收 1.55% 手续费，退到现金最省事。</p>
-
-<h3>吃：按「不用排队」筛</h3>
-<ul>
-  <li><b>日本桥</b>：百货地下食品层（depachika）买熟食回房吃，老人最舒服的一种晚餐；周边 B 级美食店密集，午市比晚市好订。</li>
-  <li><b>银座</b>：三越、松屋的餐饮层，逛累了直接上楼；老铺天妇罗和鳗鱼要提前订，午市套餐比晚市便宜近一半。</li>
-  <li><b>浅草</b>：天妇罗、鳗鱼老铺集中在仲见世周边，11:30 前到基本不排。</li>
-  <li><b>河口湖</b>：站前「ほうとう不动」的乡土南瓜面；站前小路「HAO STAY kitchen」价格实惠、有免费热水和暖气，拉面约 ¥1,200。</li>
-</ul>
-
-<h2>六、预算粗估（2 人，不含机票与购物）</h2>
-<table>
-  <tr><th>项目</th><th>金额（日元）</th><th>说明</th></tr>
-  <tr><td>东京酒店 3 晚</td><td>¥60,000–85,000</td><td>四星，含早餐</td></tr>
-  <tr><td>河口湖温泉 1 晚</td><td>¥50,000–80,000</td><td>2 人含早晚两餐</td></tr>
-  <tr><td>城际交通</td><td>¥25,000–35,000</td><td>机场往返＋东京-河口湖-御殿场-东京</td></tr>
-  <tr><td>市内交通</td><td>¥6,000–8,000</td><td>地铁＋周游巴士一日券</td></tr>
-  <tr><td>餐饮</td><td>¥40,000–60,000</td><td>5 天，含 1 次怀石</td></tr>
-  <tr><td>门票杂项</td><td>¥10,000–15,000</td><td>晴空塔等</td></tr>
-  <tr><th>合计</th><th>约 ¥190,000–280,000</th><th class="small">折人民币约 9,500–14,000（按 100 日元≈5 元粗算）</th></tr>
-</table>
-
-<h2>七、需要你确认的三件事</h2>
-<ol>
-  <li><b>落地机场是成田还是羽田？</b>— 影响第一天进城方式和出发时间（羽田 30 分钟，成田 60–90 分钟）。</li>
-  <li><b>同行几人？老人行动能力如何？</b>— 能否连续走 20 分钟、要不要轮椅，直接决定要不要包车、奥莱要不要租轮椅。</li>
-  <li><b>返程航班几点？</b>— 「下午回」如果是 15:00 起飞，第四天奥莱必须砍到 3 小时、第五天不出门。</li>
-</ol>
-
-<h2>八、这份行程的小红书来源</h2>
-<p class="small">以下为本次实际检索到的笔记（按主题归类，附点赞量供参考热度）。正文页在当前环境下被扩展拦截，未能逐篇读取全文，故结论均以标题与检索摘要为准，并已用官方交通信息交叉核对。</p>
-<div class="grid src">
-  <div class="card">
-    <h4>住宿</h4>
-    <p>· 一张图看懂东京酒店住宿 — kevin（293）</p>
-    <p>· 第一次去东京｜住新宿、上野还是东京站？— JnA自由行笔记（168）</p>
-    <p>· 第一次来东京，最推荐住哪个区域？— 东京生活Lab（276）</p>
-    <p>· 东京酒店推荐 — 卓尔（482）</p>
+  <div class="tipbox">
+    <h4>出发前先订这四样</h4>
+    <p>1. 河口湖温泉一晚（11/13，红叶祭加周五，最先卖完）；2. 东京三晚（11–13 两晚 + 14 一晚，拆成两张订单）；3. 11/13 东京到河口湖的巴士；4. 11/14 河口湖到御殿场、御殿场回东京两段巴士。</p>
   </div>
-  <div class="card">
-    <h4>带父母节奏</h4>
-    <p>· 照抄 东京懒人路线（带老妈版）— momo在旅游（158）</p>
-    <p>· 带着父母去旅行｜东京5日松弛游吃住玩全指南 — 扣小扣的陪伴笔记（38）</p>
-    <p>· 带50岁父母东京游！6天5晚全记录 — 嘟嘟噜（56）</p>
+</section>
+
+<!-- ================= 2 景点 ================= -->
+<section id="attractions">
+  <div class="sec-head"><span class="sec-num">02</span><h2>景点</h2><span class="sec-en">Attractions</span></div>
+  <p class="intro">四个点全部排进日程，判断标准不是名气，是「站得久不久、有没有地方坐、要不要爬」。几个名气更大但费腿的，放到了第 7 模块。</p>
+  <div class="cards">
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/sensoji.jpg" alt="浅草寺雷门红灯笼" loading="lazy"></div>
+      <h3>浅草寺</h3>
+      <div class="native">浅草寺 / Sensō-ji</div>
+      <p class="lede">东京最老的寺院，雷门那只大灯笼就是它。对长辈的意义不在信仰，在于这条路平、短、热闹，走两百米就能看完主要部分。</p>
+      <div class="meta-row"><span class="k">开放</span> 境内 24 小时；本堂 06:00–17:00（10 月起 06:30 开门）</div>
+      <div class="meta-row"><span class="k">费用</span> <span class="price">免费</span>（本堂前也可投币，随喜）</div>
+      <div class="meta-row"><span class="k">建议</span> 60–80 分钟，10:00 前后人还不多</div>
+      <div class="meta-row"><span class="k">提醒</span> 仲见世只走主街，两侧小巷人多且地面窄</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Sensoji+Temple+Asakusa" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('浅草寺', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Sensoji+Temple+Asakusa')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/skytree.jpg" alt="东京晴空塔夜景" loading="lazy"></div>
+      <h3>东京晴空塔</h3>
+      <div class="native">東京スカイツリー / Tokyo Skytree</div>
+      <p class="lede">全程电梯，室内观景，天气好时能看到富士山。对长辈来说这是「不费腿就能看到全景」的唯一选择。</p>
+      <div class="meta-row"><span class="k">开放</span> 10:00–21:00（最终入场 20:00）</div>
+      <div class="meta-row"><span class="k">费用</span> <span class="price">天望甲板约 ¥2,100–2,600</span>，提前网上订免排队</div>
+      <div class="meta-row"><span class="k">建议</span> 90 分钟，13:00–15:00 光线较平但人少</div>
+      <div class="meta-row"><span class="k">提醒</span> 楼下 Solamachi 商场有座椅和暖气，累了直接下来</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('东京晴空塔', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/momiji.jpg" alt="湖畔红叶" loading="lazy"></div>
+      <h3>河口湖红叶回廊</h3>
+      <div class="native">河口湖もみじ回廊</div>
+      <p class="lede">150 米长的枫树隧道，尽头正对富士山。11 月中旬是全年最好的时候，这条步道平、短，走完不累。</p>
+      <div class="meta-row"><span class="k">开放</span> 全天；红叶祭 2026.11.7–11.29，点灯至 21:00</div>
+      <div class="meta-row"><span class="k">费用</span> <span class="price">免费</span>（周游巴士一日券 ¥1,500）</div>
+      <div class="meta-row"><span class="k">建议</span> 45–60 分钟，16:00–17:00 侧光最好</div>
+      <div class="meta-row"><span class="k">提醒</span> 祭典期间摊位多、人多，轮椅通行会慢，尽量避开 11:00–15:00</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=河口湖もみじ回廊" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('河口湖红叶回廊', 0, 0, 'https://www.google.com/maps/search/?api=1&query=河口湖もみじ回廊')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/fuji.jpg" alt="河口湖与富士山" loading="lazy"></div>
+      <h3>河口湖北岸（看富士山）</h3>
+      <div class="native">河口湖 北岸</div>
+      <p class="lede">看富士山不一定要上山。北岸隔着湖面看过去，是它最上镜的角度，也是唯一不用爬、不用排队的位置。</p>
+      <div class="meta-row"><span class="k">开放</span> 全天</div>
+      <div class="meta-row"><span class="k">费用</span> <span class="price">免费</span></div>
+      <div class="meta-row"><span class="k">建议</span> 随红叶回廊一并看，日落前 40 分钟最佳</div>
+      <div class="meta-row"><span class="k">提醒</span> 11 月河口湖早晚 1–7℃，湖风大，外套要挡风</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Lake+Kawaguchi+North+Shore" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('河口湖北岸', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Lake+Kawaguchi+North+Shore')">导航</button>
+      </div>
+    </article>
+
   </div>
-  <div class="card">
-    <h4>富士山／河口湖</h4>
-    <p>· 河口湖一日游悠闲不累攻略 — Kang.（344）</p>
-    <p>· 富士山自由行攻略！4条路线不踩雷 — XinYa（353）</p>
-    <p>· 富士回游号｜购票、乘车指南 — 旅行的大钊（1,056）</p>
-    <p>· 富士山｜一日游两湖详细攻略 含详细交通 — 讨喜的喜樂（347）</p>
+</section>
+
+<!-- ================= 3 体验 ================= -->
+<section id="experiences">
+  <div class="sec-head"><span class="sec-num">03</span><h2>体验</h2><span class="sec-en">Experiences</span></div>
+  <p class="intro">三件事，都不需要体力，但都需要提前安排。</p>
+  <div class="cards">
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/japanese-onsen.jpg" alt="日式温泉旅馆" loading="lazy"></div>
+      <h3>温泉旅馆一泊二食</h3>
+      <div class="native">温泉旅館・一泊二食</div>      <p class="lede">这趟行程里最值的一笔钱。房内吃会席、屋顶泡足汤、早上再泡一次，长辈不用出门就能过完一整天。</p>
+      <div class="meta-row"><span class="k">时长</span> 一晚，15:00 入住 / 次日 10:00 退房</div>
+      <div class="meta-row"><span class="k">费用</span> <span class="price">含早晚两餐约 ¥25,000–40,000 / 人</span></div>
+      <div class="meta-row"><span class="k">地点</span> 河口湖北岸，步行可达湖边</div>
+      <div class="meta-row"><span class="k">怎么订</span> 官网或主流平台直接订「含早晚餐」房型，并在备注写明需要车站接送</div>
+      <div class="meta-row"><span class="k">提醒</span> 房内晚餐要选「部屋食」；有腰腿问题就选带椅子的和洋室，不要纯榻榻米</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Konansou+Kawaguchiko" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('湖南庄', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Konansou+Kawaguchiko')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/momiji.jpg" alt="河口湖红叶回廊" loading="lazy"></div>
+      <h3>富士河口湖红叶祭（夜点灯）</h3>
+      <div class="native">富士河口湖紅葉まつり</div>
+      <p class="lede">11 月 7 日到 29 日，红叶回廊日落后点灯到 21:00。白天看的是颜色，晚上看的是气氛，两边都值得。</p>
+      <div class="meta-row"><span class="k">时间</span> 2026.11.7–11.29，点灯 日落–21:00</div>
+      <div class="meta-row"><span class="k">费用</span> <span class="price">免费</span></div>
+      <div class="meta-row"><span class="k">地点</span> 河口湖北岸红叶回廊，红线「久保田一竹美术馆」站</div>
+      <div class="meta-row"><span class="k">提醒</span> 夜间 3–5℃，比东京低近 10℃；点灯后巴士很挤，住湖边步行范围内最稳</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=河口湖もみじ回廊" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('红叶回廊', 0, 0, 'https://www.google.com/maps/search/?api=1&query=河口湖もみじ回廊')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/tokyo-station.jpg" alt="东京站丸之内红砖站舍" loading="lazy"></div>
+      <h3>东京站丸之内站舍</h3>
+      <div class="native">東京駅丸の内駅舎</div>
+      <p class="lede">红砖老站舍本身就是景点，站前广场平、宽、有长椅。等车的空档看一眼，不额外花时间。</p>
+      <div class="meta-row"><span class="k">时间</span> 全天，夜景更完整（19:00 后亮灯）</div>
+      <div class="meta-row"><span class="k">费用</span> <span class="price">免费</span></div>
+      <div class="meta-row"><span class="k">地点</span> 东京站丸之内口，从八重洲侧走地下通道约 10 分钟</div>
+      <div class="meta-row"><span class="k">提醒</span> 站内指示牌复杂，第一次别约在站内碰头，约地面广场</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Station+Marunouchi+Building" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('东京站丸之内站舍', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Tokyo+Station+Marunouchi+Building')">导航</button>
+      </div>
+    </article>
+
   </div>
-  <div class="card">
-    <h4>购物／美食</h4>
-    <p>· 东京必逛购物地图 — ViVi Official（4,667）</p>
-    <p>· 御殿场最新最全攻略 — 深海小鲨（577）</p>
-    <p>· 注意 御殿场奥莱回东京市内只能线上买票 — 凹凸曼（15）</p>
-    <p>· 东京牛逼好吃的14家（无预约）— Dididi-（2,216）</p>
-    <p>· 银座美食推荐｜逛累了就吃 — Shire不赶路（182）</p>
-    <p>· 东京日本桥B级美食合集 — SiuSeoi（54）</p>
+</section>
+
+<!-- ================= 4 餐饮住宿 ================= -->
+<section id="dining">
+  <div class="sec-head"><span class="sec-num">04</span><h2>餐饮住宿</h2><span class="sec-en">Dining &amp; Lodging</span></div>
+  <p class="intro">住宿三家的取舍逻辑写在卡片里——东京两家二选一，河口湖一家必住。餐厅只列「不点会后悔」的，不铺清单。</p>
+
+  <h3 style="font-size:16px;color:var(--ink);margin:26px 0 4px;">住宿</h3>
+  <div class="cards">
+
+    <article class="card">
+      <h3>东京丸之内大都会饭店<span class="tag">首选</span></h3>
+      <div class="native">Hotel Metropolitan Tokyo Marunouchi</div>
+      <p class="lede">东京站日本桥口直结，电梯上 27 楼就是大堂。带长辈这件事上，它的价值几乎全在「出站到进房不超过 5 分钟」。</p>
+      <div class="meta-row"><span class="k">位置</span> 千代田区丸之内 1-7-12，Sapia Tower 27–34 层，东京站日本桥口直结</div>
+      <div class="meta-row"><span class="k">评分</span> 住客评价汇总 8.74 / 10（2,062 条，87.3% 打 8 分以上）；携程同步在售</div>
+      <div class="meta-row"><span class="k">参考价</span> <span class="price">约 ¥1,640 起 / 晚</span>（红叶季上浮，以平台实时价为准）</div>
+      <div class="meta-row"><span class="k">住客原话</span> 「地点非常好，对于有小孩跟老人，非常近，不需要走太多路就可以搭到地铁」</div>
+      <div class="meta-row"><span class="k">缺点</span> 房间小是差评第一原因；部分房型家具与卫浴偏旧；窗帘底部漏光</div>
+      <div class="meta-row"><span class="k">为什么住这</span> 12:00 退房（东京少见），去机场和去河口湖都不用拖着箱子换乘</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Hotel+Metropolitan+Tokyo+Marunouchi" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('东京丸之内大都会饭店', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Hotel+Metropolitan+Tokyo+Marunouchi')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>千禧三井花园酒店 东京 / 银座<span class="tag">银座备选</span></h3>
+      <div class="native">Millennium Mitsui Garden Hotel Tokyo / Ginza</div>
+      <p class="lede">如果这趟更偏购物，住这里比住东京站更舒服：过马路就是三越，买多了能拿回房间再出来。</p>
+      <div class="meta-row"><span class="k">位置</span> 中央区银座 5-11-1；东银座站 A1 口出站即到，<span class="mark">该出口有电梯</span></div>
+      <div class="meta-row"><span class="k">评分</span> 携程 4.6–4.7（约 2,150 条，卫生 4.7 / 设施 4.5 / 环境 4.7）；Booking 8.8（2,223 条），位置分 9.6</div>
+      <div class="meta-row"><span class="k">参考价</span> <span class="price">约 ¥2,245 起 / 晚</span>（周末与红叶季上浮，以平台实时价为准）</div>
+      <div class="meta-row"><span class="k">优点</span> 房间里能摊开两个 28 寸箱子；早餐半自助；地铁出口带电梯</div>
+      <div class="meta-row"><span class="k">缺点</span> 房间面积小；临街房夜间能听到轨道声，订房时要求高楼层或内侧</div>
+      <div class="meta-row"><span class="k">为什么住这</span> 银座四丁目，购物动线最短；去筑地、东京站都在 10 分钟内</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Millennium+Mitsui+Garden+Hotel+Tokyo+Ginza" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('千禧三井花园酒店银座', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Millennium+Mitsui+Garden+Hotel+Tokyo+Ginza')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>富士河口湖温泉 湖南庄<span class="tag g">河口湖首选</span></h3>
+      <div class="native">富士河口湖温泉郷 湖南荘 / Konansou</div>
+      <p class="lede">湖边老牌温泉旅馆，房内吃会席、屋顶泡足汤、车站免费接送。带长辈住一晚温泉，是这趟行程里最不容易出错的一笔花费。</p>
+      <div class="meta-row"><span class="k">位置</span> 山梨县富士河口湖町船津 4020，湖畔；河口湖站步行 10 分钟，有免费接送</div>
+      <div class="meta-row"><span class="k">评分</span> 携程 4.7（277 条，卫生 4.7 / 设施 4.6 / 环境 4.7 / 服务 4.6）</div>
+      <div class="meta-row"><span class="k">参考价</span> <span class="price">含早晚两餐约 ¥25,000–40,000 / 人</span>（红叶季周五为全年高位，以实时价为准）</div>
+      <div class="meta-row"><span class="k">适老设施</span> 电梯、无障碍客房、楼梯扶手、可提供轮椅</div>
+      <div class="meta-row"><span class="k">缺点</span> <span class="warnline">10:00 退房</span>，延时到 11:00 每间加收 ¥2,200；晚餐口味评价两极；部分房型夜间有流水声</div>
+      <div class="meta-row"><span class="k">为什么住这</span> 一泊二食不用出门找饭；屋顶足汤正对富士山；接送车解决最后一公里</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Konansou+Kawaguchiko" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('湖南庄', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Konansou+Kawaguchiko')">导航</button>
+      </div>
+    </article>
+
   </div>
-</div>
+
+  <h3 style="font-size:16px;color:var(--ink);margin:30px 0 4px;">当地小吃</h3>
+  <div class="cards">
+
+    <article class="card">
+      <h3>人形烧（仲见世）</h3>
+      <div class="native">人形焼</div>
+      <p class="lede">现烤的鸡蛋蛋糕，里头是红豆馅，手掌大小。浅草仲见世一条街有十几家，看哪家在排队就买哪家。</p>
+      <div class="meta-row"><span class="k">价格</span> <span class="price">¥300–600 / 袋</span></div>
+      <div class="meta-row"><span class="k">在哪吃</span> 仲见世通主街，浅草寺雷门进来 100 米内</div>
+      <div class="meta-row"><span class="k">怎么点</span> 直接指柜台上摆的成品，一袋 5–10 个；趁热吃，凉了发硬</div>
+    </article>
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/houtou.jpg" alt="馎饦面" loading="lazy"></div>
+      <h3>馎饦（ほうとう）</h3>
+      <div class="native">ほうとう</div>
+      <p class="lede">山梨的乡土面食，粗面条和南瓜、味噌一起煮成一锅，汤浓、面厚、冬天吃最合适。长辈通常很接受这个口味。</p>
+      <div class="meta-row"><span class="k">价格</span> <span class="price">¥1,200–1,800 / 锅</span></div>
+      <div class="meta-row"><span class="k">在哪吃</span> 河口湖站前一带最集中</div>
+      <div class="meta-row"><span class="k">怎么点</span> 点「ほうとう」即可，一锅一人份；怕咸可以让店家少放味噌</div>
+    </article>
+
+    <article class="card">
+      <h3>木村家红豆面包</h3>
+      <div class="native">銀座木村家 ・ あんぱん</div>
+      <p class="lede">1874 年开到现在，日本红豆面包的起点。银座逛累了买一个，坐在店里配茶。</p>
+      <div class="meta-row"><span class="k">价格</span> <span class="price">¥200–300 / 个</span></div>
+      <div class="meta-row"><span class="k">在哪吃</span> 银座四丁目，木村家本店</div>
+      <div class="meta-row"><span class="k">怎么点</span> 招牌是「桜あんぱん」和「酒種あんぱん」，柜台自取后结账</div>
+    </article>
+
+  </div>
+
+  <h3 style="font-size:16px;color:var(--ink);margin:30px 0 4px;">值得专程去</h3>
+  <div class="cards">
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/tempura.jpg" alt="天妇罗天丼" loading="lazy"></div>
+      <h3>大黑家天麸罗</h3>
+      <div class="native">大黒家天麸羅 / Daikokuya</div>
+      <p class="lede">明治 20 年创业的天丼老铺，酱汁浓、虾大。浅草寺出来步行 3 分钟，正好接午饭。</p>
+      <div class="meta-row"><span class="k">招牌</span> 天丼（海老天丼）、かき揚げ丼</div>
+      <div class="meta-row"><span class="k">人均</span> <span class="price">¥1,500–2,500</span></div>
+      <div class="meta-row"><span class="k">营业</span> 11:00–20:30（售完提前关）</div>
+      <div class="meta-row"><span class="k">评分来源</span> Google 地图（以页内实时评分为准）</div>
+      <div class="meta-row"><span class="k">为什么去</span> 天丼是东京最直给的一顿饭：一碗、有座、上菜快，长辈不用等</div>
+      <div class="meta-row"><span class="k">提醒</span> 11:30 前到，12 点后门口排队 30 分钟起</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Daikokuya+Tempura+Asakusa" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('大黑家天麸罗', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Daikokuya+Tempura+Asakusa')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>室町砂场</h3>
+      <div class="native">室町砂場 / Muromachi Sunaba</div>
+      <p class="lede">1869 年开业的荞麦老铺，日本桥上班族的午饭据点。菜单只有几样，做得很稳。</p>
+      <div class="meta-row"><span class="k">招牌</span> もり（冷荞麦）、天ざる、玉子とじ</div>
+      <div class="meta-row"><span class="k">人均</span> <span class="price">¥1,200–2,000</span></div>
+      <div class="meta-row"><span class="k">营业</span> 11:00–20:00，周日休息</div>
+      <div class="meta-row"><span class="k">评分来源</span> Google 地图（以页内实时评分为准）</div>
+      <div class="meta-row"><span class="k">为什么去</span> 离日本桥三越 2 分钟，补货后直接吃；荞麦软，不费牙</div>
+      <div class="meta-row"><span class="k">提醒</span> 老铺午市只做到 14:00 前后，别拖到下午</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Muromachi+Sunaba+Nihonbashi" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('室町砂场', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Muromachi+Sunaba+Nihonbashi')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>ほうとう不动（河口湖站前）</h3>
+      <div class="native">ほうとう不動 河口湖駅前店</div>
+      <p class="lede">站前最方便的一家馎饦，落地就能吃，不用再坐车。锅大、汤热，下火车第一顿很稳。</p>
+      <div class="meta-row"><span class="k">招牌</span> 不動ほうとう（南瓜味噌）</div>
+      <div class="meta-row"><span class="k">人均</span> <span class="price">¥1,300–1,800</span></div>
+      <div class="meta-row"><span class="k">营业</span> 11:00–20:00 前后（以门店公示为准）</div>
+      <div class="meta-row"><span class="k">评分来源</span> Google 地图（以页内实时评分为准）</div>
+      <div class="meta-row"><span class="k">为什么去</span> 河口湖站步行 2 分钟，行李不用拖远；一锅热汤对付 11 月的湖风</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=ほうとう不動+河口湖駅前店" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('ほうとう不动 河口湖站前店', 0, 0, 'https://www.google.com/maps/search/?api=1&query=ほうとう不動+河口湖駅前店')">导航</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= 5 购物 ================= -->
+<section id="shopping">
+  <div class="sec-head"><span class="sec-num">05</span><h2>购物</h2><span class="sec-en">Shopping</span></div>
+  <p class="intro">分三段：奥莱解决大件，银座解决百货与化妆品，日本桥解决伴手礼。退税都集中在最后一天上午办。</p>
+  <div class="cards">
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/gotemba.jpg" alt="御殿场奥特莱斯" loading="lazy"></div>
+      <h3>御殿场 Premium Outlets</h3>
+      <div class="native">御殿場プレミアム・アウトレット</div>
+      <p class="lede">富士山脚下的奥莱，天气好时能一边逛一边看到山。运动户外和欧美服饰折扣最实在。</p>
+      <div class="meta-row"><span class="k">位置</span> 静冈县御殿场市深泽 1312；河口湖过来约 60 分钟，回东京约 95 分钟</div>
+      <div class="meta-row"><span class="k">营业</span> 10:00–20:00（季节调整，以官网为准）</div>
+      <div class="meta-row"><span class="k">适老</span> 服务台可借轮椅；全场有顶棚、有中庭长椅、美食广场座位多</div>
+      <div class="meta-row"><span class="k">提醒</span> 回东京的高速巴士<span class="warnline">只能线上买票</span>，现场基本没位</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Gotemba+Premium+Outlets" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('御殿场 Premium Outlets', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Gotemba+Premium+Outlets')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/ginza.jpg" alt="银座街区" loading="lazy"></div>
+      <h3>银座</h3>
+      <div class="native">銀座</div>
+      <p class="lede">百货最密集的一片，也是路面最平的一片。三越、松屋、Ginza Six 三个商场足够逛两天。</p>
+      <div class="meta-row"><span class="k">买什么</span> 化妆品、服饰、文具（伊东屋）、无印良品旗舰店</div>
+      <div class="meta-row"><span class="k">退税</span> 同一店当日含税满 ¥5,000 可退，带护照原件；百货通常收 1.55% 手续费</div>
+      <div class="meta-row"><span class="k">适老</span> 各大百货都有座椅区和无障碍卫生间；走累了进任何一家大堂都能坐</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Ginza+Tokyo" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('银座', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Ginza+Tokyo')">导航</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="imgwrap"><img class="card-img" src="tokyo-guide_files/nihonbashi.jpg" alt="日本桥" loading="lazy"></div>
+      <h3>日本桥</h3>
+      <div class="native">日本橋</div>
+      <p class="lede">比银座安静一半，三越本店就在这里。退税柜台排队比银座短，适合最后一天上午来收尾。</p>
+      <div class="meta-row"><span class="k">买什么</span> 伴手礼、食品、刀具与老铺杂物（COREDO 室町）</div>
+      <div class="meta-row"><span class="k">退税</span> 三越本店退税柜台在地下，上午 10:00–11:00 人最少</div>
+      <div class="meta-row"><span class="k">适老</span> 街区平、人行道宽，走两步就有便利店和长椅</div>
+      <div class="acts">
+        <a class="map-a" href="https://www.google.com/maps/search/?api=1&query=Nihonbashi+Tokyo" target="_blank" rel="noopener">Google 地图</a>
+        <button class="nav-btn" onclick="openVenueNav('日本桥', 0, 0, 'https://www.google.com/maps/search/?api=1&query=Nihonbashi+Tokyo')">导航</button>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="tipbox">
+    <h4>伴手礼：买这几样不会错</h4>
+    <p><b>东京香蕉</b>（Tokyo Banana）——车站和机场都有，保质期短，临走前买；<b>文明堂蜂蜜蛋糕</b>——日本桥老铺，保质期约两周，适合带回国；<b>药妆</b>——松本清、唐吉诃德，消耗品退税后封袋，离境前不能拆；<b>刀具与厨房小物</b>——日本桥木屋，可托运但必须放托运行李。</p>
+  </div>
+</section>
+
+<!-- ================= 6 当地贴士 ================= -->
+<section id="tips">
+  <div class="sec-head"><span class="sec-num">06</span><h2>当地贴士</h2><span class="sec-en">Local Tips</span></div>
+  <div class="cards two">
+
+    <div class="tipbox">
+      <h4>签证（必须先办）</h4>
+      <p>中国公民赴日<b>没有免签，也没有落地签</b>，旅游必须提前办签证。</p>
+      <p>单次旅游签可通过指定代办机构申请 <b>JAPAN eVISA</b>（停留 15 天或 30 天），出签约 5 个工作日，签证费单次约 715 元。个人不能直接向使领馆送签。</p>
+      <p class="small">依据：日本驻华大使馆及各代办机构 2026 年 9 月公示。政策会调整，出行前再核一次。</p>
+    </div>
+
+    <div class="tipbox">
+      <h4>公共假期</h4>
+      <p>日本 11 月有 11 月 3 日文化日、11 月 23 日勤劳感谢日，<b>都不在本次行程日期内</b>。</p>
+      <p>但 11 月中旬是红叶季高峰，河口湖周末（11/14–15）本地游客多，住宿和巴士要早订。</p>
+    </div>
+
+    <div class="tipbox">
+      <h4>交通</h4>
+      <p>市内用 Suica / PASMO，手机可加，便利店也能刷。东京地铁换乘多，站内电梯要找「エレベーター」标识，别跟着人流走楼梯。</p>
+      <p>去河口湖：高速巴士约 2 小时 15 分、¥2,000 上下；直达特急约 1 小时 53 分、¥4,200，全车指定席。带长辈优先巴士，少一次换乘。</p>
+    </div>
+
+    <div class="tipbox">
+      <h4>天气与穿搭</h4>
+      <p>11 月东京日均 13℃、夜间 7℃；河口湖日均 7℃、夜间可到 1℃。湖边风大，体感更低。</p>
+      <p>给长辈备：抓绒或薄羽绒 + 防风外套、围巾、暖宝宝。室内暖气足，穿脱方便最重要。</p>
+    </div>
+
+    <div class="tipbox">
+      <h4>支付与现金</h4>
+      <p>大商场、连锁店、便利店都能刷卡和扫码，但老铺、小摊、部分神社只收现金。随身带 1–2 万日元零钞，别全靠手机。</p>
+    </div>
+
+    <div class="tipbox">
+      <h4>安全与应急</h4>
+      <p>报警 110，火警急救 119。日本医院就诊需先挂号，建议出发前买好含医疗的旅行险。</p>
+      <p>药妆店可买常用药，但处方药需翻译件。带上长辈的常备药原包装。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= 7 未安排 ================= -->
+<section id="unscheduled">
+  <div class="sec-head"><span class="sec-num">07</span><h2>未安排的景点</h2><span class="sec-en">Unscheduled</span></div>
+  <p class="intro">都是当天路线 30 公里内、值得去但没排进去的地方。勾选后点下面的按钮，会生成一段可以直接粘给 AI 的改行程请求。</p>
+
+  <div class="unc">
+    <label>
+      <input type="checkbox" class="pick" data-name="皇居东御苑" data-dist="距东京站约 1 km" data-dur="60–90 分钟" data-link="https://www.google.com/maps/search/?api=1&query=Kokyogaien+East+Gardens">
+      <span class="body">
+        <h3>皇居东御苑</h3>
+        <div class="native">皇居東御苑</div>
+        <p class="lede" style="margin:4px 0;">东京站旁边的一片大绿地，免费、平路、人少。11 月银杏和枫叶都好。</p>
+        <div class="meta-row"><span class="k">距锚点</span> 距东京站约 1 km</div>
+        <div class="meta-row"><span class="k">建议</span> 60–90 分钟</div>
+        <div class="meta-row"><span class="k">为何没排</span> <span class="warnline">周一、周五休园</span>，本次可用日期只有 11/12 周四或 11/14 傍晚，都不顺路</div>
+      </span>
+    </label>
+  </div>
+
+  <div class="unc">
+    <label>
+      <input type="checkbox" class="pick" data-name="上野公园与东京国立博物馆" data-dist="距浅草约 3 km" data-dur="2–3 小时" data-link="https://www.google.com/maps/search/?api=1&query=Ueno+Park+Tokyo">
+      <span class="body">
+        <h3>上野公园 · 东京国立博物馆</h3>
+        <div class="native">上野公園 / 東京国立博物館</div>
+        <p class="lede" style="margin:4px 0;">博物馆室内、有电梯和座椅，下雨天的最佳备选；上野公园本身也平。</p>
+        <div class="meta-row"><span class="k">距锚点</span> 距浅草约 3 km，地铁 5 分钟</div>
+        <div class="meta-row"><span class="k">建议</span> 2–3 小时</div>
+        <div class="meta-row"><span class="k">为何没排</span> Day 2 已有浅草与晴空塔，再加博物馆会超过 8000 步</div>
+      </span>
+    </label>
+  </div>
+
+  <div class="unc">
+    <label>
+      <input type="checkbox" class="pick" data-name="忍野八海" data-dist="距河口湖约 15 km" data-dur="90 分钟" data-link="https://www.google.com/maps/search/?api=1&query=Oshino+Hakkai">
+      <span class="body">
+        <h3>忍野八海</h3>
+        <div class="native">忍野八海</div>
+        <p class="lede" style="margin:4px 0;">富士山雪水渗出的八个清池，村子平、路短，长辈走起来不费劲。</p>
+        <div class="meta-row"><span class="k">距锚点</span> 距河口湖约 15 km</div>
+        <div class="meta-row"><span class="k">建议</span> 90 分钟</div>
+        <div class="meta-row"><span class="k">为何没排</span> Day 3 下午已排红叶回廊与温泉，加这一站会挤掉休息时间</div>
+      </span>
+    </label>
+  </div>
+
+  <div class="unc">
+    <label>
+      <input type="checkbox" class="pick" data-name="新仓山浅间公园" data-dist="距河口湖约 10 km" data-dur="90 分钟" data-link="https://www.google.com/maps/search/?api=1&query=Arakurayama+Sengen+Park">
+      <span class="body">
+        <h3>新仓山浅间公园（忠灵塔）</h3>
+        <div class="native">新倉山浅間公園</div>
+        <p class="lede" style="margin:4px 0;">富士山加五重塔的经典机位，照片最好看的一张基本都出自这里。</p>
+        <div class="meta-row"><span class="k">距锚点</span> 距河口湖约 10 km</div>
+        <div class="meta-row"><span class="k">建议</span> 90 分钟</div>
+        <div class="meta-row"><span class="k">为何没排</span> <span class="warnline">登顶要爬约 400 级台阶</span>，带长辈不适合；如坚持去，只能到山下平台</div>
+      </span>
+    </label>
+  </div>
+
+  <div class="unc">
+    <label>
+      <input type="checkbox" class="pick" data-name="明治神宫" data-dist="距银座约 6 km" data-dur="90 分钟" data-link="https://www.google.com/maps/search/?api=1&query=Meiji+Jingu">
+      <span class="body">
+        <h3>明治神宫</h3>
+        <div class="native">明治神宮</div>
+        <p class="lede" style="margin:4px 0;">东京最有分量的神社，森林步道安静，和浅草是完全两种气质。</p>
+        <div class="meta-row"><span class="k">距锚点</span> 距银座约 6 km</div>
+        <div class="meta-row"><span class="k">建议</span> 90 分钟</div>
+        <div class="meta-row"><span class="k">为何没排</span> 参道是碎石路，<span class="warnline">轮椅和助行器不好走</span>；且与浅草寺类型重复</div>
+      </span>
+    </label>
+  </div>
+
+  <div class="gen">
+    <button onclick="genPrompt()">生成编辑行程文字</button>
+    <button class="ghost" onclick="copyPrompt()">复制</button>
+  </div>
+  <textarea id="promptOut" readonly placeholder="勾选上面的景点后，点「生成编辑行程文字」，这里会出现一段可直接粘贴给 AI 的请求。"></textarea>
+</section>
 
 <footer>
-  交通时刻与票价核对自：富士急行线官网（2026.3.14 起时刻表）、富士急巴士、JR 关东巴士、御殿场 Premium Outlets 交通页。<br>
-  红叶祭日期：2026.11.7–11.29，点灯日落至 21:00。<br>
-  时刻表与票价可能调整，出行前 1 周请再核对一次官网。
+  <p>本手册为个人行程整理，交通时刻与票价核对自富士急行线官网（2026.3.14 起时刻表）、富士急巴士、JR 关东巴士与御殿场 Premium Outlets 交通页；酒店评分与住客原话来自携程、Booking 及公开评价汇总，均为参考值，以平台实时页面为准。</p>
+  <p>红叶祭日期：2026 年 11 月 7 日–29 日，点灯至 21:00。配图来源：Pexels（License 可商用）。</p>
 </footer>
 
 </div>
+
+<script>
+// ── 顶部导航高亮 ──────────────────────────────
+(function(){
+  var links = document.querySelectorAll('nav a');
+  var secs = [].map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
+  function onScroll(){
+    var y = window.scrollY + 120, idx = 0;
+    secs.forEach(function(s,i){ if (s && s.offsetTop <= y) idx = i; });
+    links.forEach(function(a,i){ a.classList.toggle('on', i === idx); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+
+// ── 未安排景点：勾选高亮 + 生成提示词 ──────────────
+document.querySelectorAll('.pick').forEach(function(cb){
+  cb.addEventListener('change', function(){
+    cb.closest('.unc').classList.toggle('picked', cb.checked);
+  });
+});
+
+function genPrompt(){
+  var picked = [].slice.call(document.querySelectorAll('.pick:checked'));
+  var out = document.getElementById('promptOut');
+  if (!picked.length){ out.value = '请先勾选至少一个景点。'; return; }
+  var list = picked.map(function(cb, i){
+    return (i+1) + '. ' + cb.dataset.name + '（' + cb.dataset.dist + '，建议 ' + cb.dataset.dur + '，地图：' + cb.dataset.link + '）';
+  }).join('\n');
+
+  out.value =
+'请基于下面这份「东京·富士山 5 天 4 晚」手册，重新生成一份完整的 7 模块 HTML 旅行手册。\n\n' +
+'【基础信息】\n' +
+'目的地：东京 + 富士山河口湖；日期 2026.11.11–11.15；2 人以上同行，含长辈（60 岁以上），节奏必须慢。\n' +
+'时间盒：每天 09:00 后出发，21:00 前收尾；一天只排一个主景点；午后留 1.5 小时休息。\n\n' +
+'【当前每日主题】\n' +
+'Day1 11/11 落地日：机场→东京站一带入住，只吃饭不排景点。\n' +
+'Day2 11/12 浅草一带：浅草寺→晴空塔，午后回酒店休息。\n' +
+'Day3 11/13 河口湖：上午巴士前往，午后温泉旅馆休息，傍晚红叶回廊。\n' +
+'Day4 11/14 御殿场奥莱→回东京。\n' +
+'Day5 11/15 上午日本桥/银座补货，午后机场。\n\n' +
+'【需要加入的景点】\n' + list + '\n\n' +
+'【指令】\n' +
+'1. 把这些景点合理安排进最顺路的一天，不要造成折返。\n' +
+'2. 如果原行程时间不够，请明确提示「可在第 X 天增加一日安排」，或指出应压缩/替换当天哪个景点。\n' +
+'3. 保持原有节奏约束：含长辈、不赶路、每天一个主景点、午后留休息。\n' +
+'4. 输出完整的 7 模块 HTML（行程 / 景点 / 体验 / 餐饮住宿 / 购物 / 当地贴士 / 未安排的景点清单），保持原有版式与配色。\n\n' +
+'（来源：东京·富士山 5 天 4 晚 旅行手册）';
+  out.focus(); out.select();
+}
+
+function copyPrompt(){
+  var out = document.getElementById('promptOut');
+  if (!out.value){ genPrompt(); }
+  if (!out.value) return;
+  out.select();
+  try { document.execCommand('copy'); } catch(e){}
+  if (navigator.clipboard) { navigator.clipboard.writeText(out.value).catch(function(){}); }
+}
+
+// ── 导航深链模块（整段内联，无依赖）──────────────────────────
+var NAV_REGION = 'international';
+var NAV_UA = (navigator.userAgent || '').toLowerCase();
+var NAV_IN_WEBVIEW = /micromessenger|xhs|xhsdiscover|discover\/|tiktok|aweme|weibo|qq\/|qqbrowser|alipayclient|dingtalk|lark|feishu|ucbrowser|baiduboxapp|toutiao|newsarticle/.test(NAV_UA);
+var NAV_IS_IOS = /ipad|iphone|ipod/.test(NAV_UA);
+var NAV_IS_MOBILE = /android|iphone|ipad|ipod|mobile/.test(NAV_UA);
+
+function navApple(n, la, ln) { return 'https://maps.apple.com/?q=' + encodeURIComponent(n) + '&ll=' + la + ',' + ln; }
+function navGoogleApp(n) { return 'comgooglemaps://?q=' + encodeURIComponent(n); }
+function navGoogleWeb(n) { return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(n); }
+
+var NAV_PROVIDERS = {
+  google: { label: 'Google 地图', app: function (n) { return navGoogleApp(n); }, web: function (n) { return navGoogleWeb(n); } },
+  apple:  { label: '苹果地图', app: null, web: navApple }
+};
+var NAV_CHAIN = ['google', 'apple'];
+
+function navTryScheme(url, timeout) {
+  return new Promise(function (resolve) {
+    var settled = false;
+    function onHide() { if (!settled) { settled = true; cleanup(); resolve(true); } }
+    function cleanup() {
+      document.removeEventListener('visibilitychange', onHide);
+      window.removeEventListener('pagehide', onHide);
+    }
+    document.addEventListener('visibilitychange', onHide);
+    window.addEventListener('pagehide', onHide);
+    window.location.href = url;
+    setTimeout(function () { if (!settled) { settled = true; cleanup(); resolve(false); } }, timeout || 1800);
+  });
+}
+
+function openVenueNav(name, lat, lng, webLink) {
+  if (!lat || !lng) { window.open(webLink || navGoogleWeb(name)); return; }
+  var first = NAV_PROVIDERS[NAV_CHAIN[0]];
+  if (NAV_IN_WEBVIEW || !NAV_IS_MOBILE) { window.open(first.web(name, lat, lng)); return; }
+  (function step(i) {
+    if (i >= NAV_CHAIN.length) { window.open(first.web(name, lat, lng)); return; }
+    var p = NAV_PROVIDERS[NAV_CHAIN[i]];
+    if (!p.app) { window.open(p.web(name, lat, lng)); return; }
+    navTryScheme(p.app(name, lat, lng)).then(function (opened) {
+      if (!opened) step(i + 1);
+    });
+  })(0);
+}
+</script>
 </body>
 </html>
